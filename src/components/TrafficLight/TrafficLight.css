@@ -1,0 +1,54 @@
+.TrafficLight {
+    width: 200px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: grey;
+}
+
+.TrafficLight__item {
+    opacity: .1;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.TrafficLight__item_color_red {
+    background-color: red;
+}
+
+.TrafficLight__item_color_yellow {
+    background-color: yellow;
+}
+
+.TrafficLight__item_color_green {
+    background-color: green;
+}
+
+.TrafficLight__item_status_active {
+    opacity: 1;
+    transition: .3s;
+}
+
+.TrafficLight__item_flashing {
+    animation: flashing 2s ease-in-out infinite;
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 1;
+        transition: .3s;
+    }
+
+    50% {
+        opacity: .1;
+        transition: .3s;
+    }
+
+    100% {
+        opacity: 1;
+        transition: .3s;
+    }
+}
